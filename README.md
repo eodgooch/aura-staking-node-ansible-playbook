@@ -29,7 +29,7 @@ Python >= 3.6
 
 1) Clone this repo:
 ```
-git clone https://github.com/eodgooch/aura-staking-node-digital-ocean
+git clone https://github.com/eodgooch/aura-staking-node-ansible-playbook
 cd aura-staking-node-digital-ocean
 ```
 
