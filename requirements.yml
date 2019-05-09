@@ -1,0 +1,61 @@
+- name: digitalocean
+  src: jasonheecs.digitalocean
+  version: 1.2.0
+
+- name: python-raw
+  src: jasonheecs.ubuntu-python-raw
+  version: 1.0.0
+
+- name: swapfile
+  src: nickjj.swapfile
+
+- name: fail2ban
+  src: robertdebock.fail2ban
+
+- name: ufw
+  src: weareinteractive.ufw
+  version: 1.7.1
+
+- name: ntp
+  src: geerlingguy.ntp
+  version: 1.6.0
+
+- name: users
+  src: weareinteractive.users
+  version: 1.9.2
+
+- name: unattended-upgrades
+  src: jnv.unattended-upgrades
+  version: v1.6.0
+
+- name: sshd
+  src: willshersystems.sshd
+  version: v0.6.1
+
+- name: nginx
+  src: geerlingguy.nginx
+  version: 2.6.0
+
+- name: php
+  src: geerlingguy.php
+  version: 3.6.0
+
+- name: mysql
+  src: geerlingguy.mysql
+  version: 2.9.0
+
+- name: php-mysql
+  src: geerlingguy.php-mysql
+  version: 2.0.1
+
+- name: docker
+  src: geerlingguy.docker
+
+- name: docker-compose
+  src: weareinteractive.docker_compose
+
+- name: nodejs
+  src: geerlingguy.nodejs
+
+- name: python3
+  src: mdklatt.python3

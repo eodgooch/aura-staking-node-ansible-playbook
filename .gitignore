@@ -1,0 +1,8 @@
+.idea/
+.DS_Store
+.vagrant
+*.log
+vendor
+*.retry
+group_vars/all/secret.yml
+.kitchen

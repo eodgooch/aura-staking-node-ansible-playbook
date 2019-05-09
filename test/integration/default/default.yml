@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  gather_facts: no
+  become: no
+  roles:
+    - { role: python-raw }
+
+- hosts: localhost
+  become: yes
+  roles:
+    - { role: swapfile, tags: [swapfile] }
+    - { role: fail2ban, tags: [fail2ban] }
+    - { role: ufw, tags: [ufw] }
+    - { role: ntp, tags: [ntp] }
+    - { role: users, tags: [users] }
+    - { role: unattended-upgrades, tags: [unattended-upgrades] }
+    - { role: sshd, tags: [sshd] }
+  vars:
+    - users:
+      - username: foobar
+        name: Foo Bar
+        groups:
+          - sudo
