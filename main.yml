@@ -57,6 +57,24 @@
     - fail2ban_ip_whitelist: "{{ local_machine_ip }}/8"
     - ansible_python_interpreter: /usr/bin/python3
 
+- hosts: do_droplet_in_memory
+  become: yes
+  gather_facts: true
+  tasks:
+    - name: Configuring ufw logrotate
+      template:
+        src: etc-logrotate.d-ufw.j2
+        dest: /etc/logrotate.d/ufw
+        owner: root
+        group: root
+        mode: "0644"
+    - name: Configuring syslog logrotate
+      template:
+        src: etc-logrotate.d-rsyslog.j2
+        dest: /etc/logrotate.d/rsyslog
+        owner: root
+        group: root
+        mode: "0644"
 
 - hosts: do_droplet_in_memory
   become: yes
@@ -83,6 +101,6 @@
     - npm_config_prefix: "/usr/local/lib/npm"
     - npm_config_unsafe_perm: "true"
     - nodejs_npm_global_packages:
-        - name: "@auroradao/aurad-cli"
-          version: 0.1.5
+        - name: "@idexio/idexd-cli"
+          version: 0.2.1
     - ansible_python_interpreter: /usr/bin/python3
